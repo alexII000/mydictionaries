@@ -9,11 +9,17 @@ person["pets"] = {"dog": "Fido", "cat": "Sox"}
 print(person)
 
 # print out the name of the second child
-
+print(person["children"][1])
 
 # print out the name of the cat
+# for pet in person["pets"]:
+#     print("cat")
 
 # iterate through all children and print out each child
+for child in person["children"]:
+    print(child)
 
 # print out the pets in this format:
 # type of pet: dog name of pet: Fido
+for pet, name in person.pets():
+    print(f"type of pet: {pet} Name of pet: {name}")
