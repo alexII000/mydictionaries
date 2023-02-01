@@ -12,7 +12,7 @@ print(person)
 print(person["children"][1])
 
 # print out the name of the cat
-# for pet in person["pets"]:
+for pet in person["pets"]:
 #     print("cat")
 
 # iterate through all children and print out each child
