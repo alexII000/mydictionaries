@@ -49,9 +49,17 @@ min_magnitude = 6
 
 
 eq_dict = {}
-features = earthquakes["features"]
-for feature in features:
-    magnitude = feature["properties"]["mag"]
-    if magnitude > 6:
+individual_quake = earthquakes["features"]
+for individual_quake in individual_quake:
+    magnitude = individual_quake["properties"]["mag"]
+    if magnitude > min_magnitude:
         # print("Earthquake with magnitude greater than 6:", feature)
-        eq_dict{}
+        eq_dict["Magnitude"] = individual_quake["properties"]["mag"]
+        eq_dict["Location"] = individual_quake["properties"]["place"]
+        eq_dict["Latitude"] = individual_quake["geometry"]["coordinates"][0]
+        eq_dict["Longitude"] = individual_quake["geometry"]["coordinates"][1]
+        print(f"Location: {eq_dict['Location']}")
+        print(f"Magnitude: {eq_dict['Magnitude']}")
+        print(f"Longitude: {eq_dict['Longitude']}")
+        print(f"Latitude: {eq_dict['Latitude']}")
+        print("\n" * 2)
