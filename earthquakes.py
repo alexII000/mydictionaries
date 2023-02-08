@@ -57,3 +57,7 @@ def main():
             print(f"Longitude: {eq_dict['Longitude']}")
             print(f"Latitude: {eq_dict['Latitude']}")
             print("\n" * 2)
+
+
+if __name__ == "__main__":
+    main()
